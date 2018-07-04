@@ -40,11 +40,13 @@
                 </div>
             </scroll>
         </div>
+        <assistant></assistant>
     </div>
 
 </template>
 <script>
 import Scroll from 'base/scroll/scroll'
+import Assistant from 'base/assistant/assistant'
 import {mock_doctor} from 'mock/mock_doctor'
 export default {
     data(){
@@ -61,7 +63,8 @@ export default {
         console.log(this.offsetH)
     },
     components:{
-        Scroll
+        Scroll,
+        Assistant
     }
 }
 </script>

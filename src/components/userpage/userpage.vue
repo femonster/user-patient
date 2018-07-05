@@ -2,14 +2,14 @@
     <div class="user-box">
         <div class="u-header" ref="header">
             <div class="u-top">
-                <router-link :to="`#`">个人主页</router-link>
+                <router-link :to="`/person`">个人主页</router-link>
                 <p>北京市</p>
-                <router-link :to="`#`">消息中心</router-link>
+                <router-link :to="`/notice`">消息中心</router-link>
             </div>
             <div class="u-btns">
-                <router-link :to="`#`" tag="cube-button">家庭医生</router-link>
-                <router-link :to="`#`" tag="cube-button">医疗护理</router-link>
-                <router-link :to="`#`" tag="cube-button">图文咨询</router-link>
+                <router-link :to="`/homelist`" tag="cube-button">家庭医生</router-link>
+                <router-link :to="`/ntlist`" tag="cube-button">医疗护理</router-link>
+                <router-link :to="`/consultlist`" tag="cube-button">图文咨询</router-link>
             </div>
             <nav class="doctor-nav">
                 <ul>
@@ -26,7 +26,7 @@
         <div class="doctor-list" :style="`top:${offsetH}px`">
             <scroll :data="doctorList" class="doctor-scroll">
                 <div>
-                    <div class="doctor-item" v-for="(item,index) in doctorList">
+                    <div class="doctor-item" v-for="(item,index) in doctorList" @click="toDoc(item.id)">
                         <div class="img-box">
                             <img :src="item.avatar" alt="">
                         </div>
@@ -61,6 +61,11 @@ export default {
     mounted(){
         this.offsetH = this.$refs.header.clientHeight+20
         console.log(this.offsetH)
+    },
+    methods:{
+        toDoc(id){
+            this.$router.push(`/doctor/${id}`)
+        }
     },
     components:{
         Scroll,

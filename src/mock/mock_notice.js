@@ -5,22 +5,22 @@ export const mock_notice = [{
         "zname": "最近",
         "items": [{
                 "time": "2018/06/27 17:38",
-                "notice": "由于身体不适，本周暂不接受预约",
+                "notice": "您的退款已经入账",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/06/27 15:48",
-                "notice": "医生也是人，也会生病吃药",
+                "notice": "您关注的医师今天可以预约",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/06/27 15:36",
-                "notice": "今天心情不是很好",
+                "notice": "恭喜您获得了三张优惠券",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/06/27 15:28",
-                "notice": "我已经好了，谢谢大家的关系",
+                "notice": "由于您在预约时间未能及时到达看病，并且在预约时间24小时之前未能退款，您所缴纳的预约费将不再退还给您，抱歉",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
         ]
@@ -30,22 +30,22 @@ export const mock_notice = [{
         "zname": "5月",
         "items": [{
                 "time": "2018/05/31 14:38",
-                "notice": "由于身体不适，本周暂不接受预约",
+                "notice": "您的退款已经入账",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/05/31 14:48",
-                "notice": "医生也是人，也会生病吃药",
+                "notice": "您关注的医师今天可以预约",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/05/31 14:58",
-                "notice": "今天心情不是很好",
+                "notice": "恭喜您获得了三张优惠券",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/05/31 15:48",
-                "notice": "我已经好了，谢谢大家的关系",
+                "notice": "由于您在预约时间未能及时到达看病，并且在预约时间24小时之前未能退款，您所缴纳的预约费将不再退还给您，抱歉",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
         ]
@@ -55,22 +55,22 @@ export const mock_notice = [{
         "zname": "4月",
         "items": [{
                 "time": "2018/04/31 14:38",
-                "notice": "由于身体不适，本周暂不接受预约",
+                "notice": "您的退款已经入账",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/04/23 14:48",
-                "notice": "医生也是人，也会生病吃药",
+                "notice": "您关注的医师今天可以预约",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/04/13 16:48",
-                "notice": "今天心情不是很好",
+                "notice": "恭喜您获得了三张优惠券",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/04/01 16:48",
-                "notice": "我已经好了，谢谢大家的关系",
+                "notice": "由于您在预约时间未能及时到达看病，并且在预约时间24小时之前未能退款，您所缴纳的预约费将不再退还给您，抱歉",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
         ]
@@ -80,22 +80,22 @@ export const mock_notice = [{
         "zname": "3月",
         "items": [{
                 "time": "2018/03/31 13:38",
-                "notice": "由于身体不适，本周暂不接受预约",
+                "notice": "您的退款已经入账",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/03/23 13:38",
-                "notice": "医生也是人，也会生病吃药",
+                "notice": "您关注的医师今天可以预约",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/03/13 16:38",
-                "notice": "今天心情不是很好",
+                "notice": "恭喜您获得了三张优惠券",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/03/01 16:38",
-                "notice": "我已经好了，谢谢大家的关系",
+                "notice": "由于您在预约时间未能及时到达看病，并且在预约时间24小时之前未能退款，您所缴纳的预约费将不再退还给您，抱歉",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
         ]
@@ -104,22 +104,22 @@ export const mock_notice = [{
         "zname": "2月",
         "items": [{
                 "time": "2018/02/31 12:38",
-                "notice": "由于身体不适，本周暂不接受预约",
+                "notice": "您的退款已经入账",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/02/23 12:28",
-                "notice": "医生也是人，也会生病吃药",
+                "notice": "您关注的医师今天可以预约",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/02/13 16:28",
-                "notice": "今天心情不是很好",
+                "notice": "恭喜您获得了三张优惠券",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "2018/02/01 16:28",
-                "notice": "我已经好了，谢谢大家的关系",
+                "notice": "由于您在预约时间未能及时到达看病，并且在预约时间24小时之前未能退款，您所缴纳的预约费将不再退还给您，抱歉",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
         ]
@@ -129,27 +129,27 @@ export const mock_notice = [{
         "zname": "1月",
         "items": [{
                 "time": "1018/01/31 11:38",
-                "notice": "由于身体不适，本周暂不接受预约",
+                "notice": "您的退款已经入账",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "1018/01/13 11:18",
-                "notice": "医生也是人，也会生病吃药",
+                "notice": "您关注的医师今天可以预约",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "1018/01/13 16:18",
-                "notice": "今天心情不是很好",
+                "notice": "恭喜您获得了三张优惠券",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "1018/01/03 18:18",
-                "notice": "今天心情不是很好",
+                "notice": "恭喜您获得了三张优惠券",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
             {
                 "time": "1018/01/01 16:18",
-                "notice": "我已经好了，谢谢大家的关系",
+                "notice": "由于您在预约时间未能及时到达看病，并且在预约时间24小时之前未能退款，您所缴纳的预约费将不再退还给您，抱歉",
                 "avatar": "http://www.gengkai.site/assets/images/avatar.jpg"
             },
         ]

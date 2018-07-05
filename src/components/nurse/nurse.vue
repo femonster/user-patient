@@ -1,13 +1,19 @@
 <template>
-    <div class="doctor-box">
-        <d-header></d-header>
+    <div class="nurse-box">
+        <d-header :isdoc="false"></d-header>
         <div class="func-btns">
-            <button class="func-btn tw-btn" data-check='tw' :class="{currnet:ischeck1}" @click="checkBtn">图文咨询<br/>￥50/次</button>
-            <button class="func-btn jt-btn" data-check='jt' :class="{currnet:ischeck2}" @click="checkBtn">家庭医生<br/>￥250/月</button>
-            <button class="func-btn gh-btn" data-check='gh' :class="{currnet:ischeck3}" @click="checkBtn">挂号诊疗<br/>￥250/次</button>
+            <button 
+            v-for="(item,index) in btnsmock"
+            class="func-btn" 
+            :class="{currnet:index===currentIndex}" 
+            @click="checkBtn(index)"
+            >{{item.type}}
+            <br/>
+            {{item.price}}
+            </button>
         </div>
         <div class="doc-imgs">
-            <h4>医师风采</h4>
+            <h4>护士风采</h4>
             <div class="imgs-box">
                 <img src="https://y.gtimg.cn/music/photo_new/T001R300x300M000003ArN8Z0WpjTz.jpg?max_age=2592000">
                 <img src="https://y.gtimg.cn/music/photo_new/T001R300x300M000003CoxJh1zFPpx.jpg?max_age=2592000">
@@ -43,13 +49,13 @@
                         <img src="https://y.gtimg.cn/music/photo_new/T001R300x300M000000hNnWC3kko2c.jpg?max_age=2592000" alt="">
                         <div class="c-desc">
                             <p>张浪5 <span>❤❤❤❤❤</span></p>
-                            <p>张医生特别负责，认真</p>
+                            <p>张护士特别负责，认真</p>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-        <cube-button class="pay-btn">({{btntext}})购买</cube-button>
+        <cube-button class="pay-btn">({{btnsmock[currentIndex].type}})购买</cube-button>
     </div>
 </template>
 <script>
@@ -57,47 +63,36 @@ import DHeader from 'components/m-header/d-header'
 export default {
     data(){
         return {
-            btntext:"图文咨询",
-            ischeck1:true,
-            ischeck2:false,
-            ischeck3:false
+            currentIndex:0,
+            btnsmock:[{
+                type:"肌肉/皮下注射",
+                price:"￥50元/次"
+            },{
+                type:"婴幼儿护理",
+                price:"￥250元/月"
+            },{
+                type:"产后催乳",
+                price:"￥250元/次"
+            },{
+                type:"尿管护理",
+                price:"￥250元/次"
+            },{
+                type:"健康管理",
+                price:"￥250元/次"
+            }]
         }
     },
     methods:{
-        _tohome(){
-            this.btntext = "家庭医生"
-            this.ischeck1=false
-            this.ischeck2=true
-            this.ischeck3=false
-        },
-        _totw(){
-            this.btntext = "图文咨询"
-            this.ischeck1=true
-            this.ischeck2=false
-            this.ischeck3=false
-        },
-        _togh(){
-            this.btntext = "挂号诊疗"
-            this.ischeck1=false
-            this.ischeck2=false
-            this.ischeck3=true
-        },
-        checkBtn(event){
-            var types = event.target.dataset.check 
-            if(types=="tw"){
-                this._totw()
-            }else if(types=="jt"){
-                this._tohome()
-            }else{
-                this._togh()
-            }
+        checkBtn(index){
+            this.currentIndex = index
         }
     },
     created(){
-        document.title = "医生详情"
-        if(this.$route.query.t=="home"){
-            this._tohome()
-        }
+        document.title = "护士详情"
+        this.currentIndex = Number(this.$route.query.t)
+        // if(this.$route.query.t=="home"){
+        //     this._tohome()
+        // }
     },
     components:{
         DHeader
@@ -105,7 +100,7 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-.doctor-box
+.nurse-box
     padding-bottom 40px
     .func-btns
         width 100%

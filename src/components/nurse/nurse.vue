@@ -89,7 +89,7 @@ export default {
     },
     created(){
         document.title = "护士详情"
-        this.currentIndex = Number(this.$route.query.t)
+        this.currentIndex = this.$route.query.t?Number(this.$route.query.t):0;
         // if(this.$route.query.t=="home"){
         //     this._tohome()
         // }

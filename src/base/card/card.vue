@@ -3,13 +3,33 @@
     <div class="todo-card">
         <template v-if="cardType==1">
             <div class="todo-l">
-                <p>时间：{{cardData.time}}</p>
-                <p>姓名：{{cardData.uname}}</p>
-                <p>状态：{{cardData.status==0?"未开始":(cardData.status==1?"正在候诊":(cardData.status==2?"正在诊断":"已完成"))}}</p>
-                <cube-button :inline="true" @click="wenzhen">问诊</cube-button>
+                <p>预约时间：{{cardData.time}}</p>
+                <p>预约地点：{{cardData.address}}</p>
+                <p>问诊方式：{{cardData.method==1?"门诊":"上门"}}</p>
+                <p>预约号码：{{cardData.number}}</p>
+                <p>问诊进程：{{cardData.process==1?"首诊":"复诊"}}</p>
+                <template v-if="cardData.status==0">
+                    <cube-button :inline="true" @click="houzhen">候诊</cube-button>
+                </template>
+                <template v-else-if="cardData.status==-1">
+                   <p style="color:red;">已过期</p>
+                </template>
+                <template v-else-if="cardData.status==1">
+                   <p style="color:green;">正在候诊</p>
+                </template>
+                <template v-else-if="cardData.status==2">
+                   <p style="color:green;">正在诊断</p>
+                </template>
+                <template v-else-if="cardData.status==3">
+                   <cube-button :inline="true" @click="pingjia">评价</cube-button>
+                </template>
+                <template v-else-if="cardData.status==4">
+                   <p style="color:gray;">已完成</p>
+                </template>
             </div>
             <div class="todo-r">
                 <div class="todo-bg" :style="`background-image:url(${cardData.avatar})`"></div>
+                <p style="text-align:center;padding-top:10px">{{cardData.uname}} 医师</p>
             </div>
             <div class="todo-status">{{cardData.method==1?"门诊":"上门"}}</div>
         </template>
@@ -36,11 +56,17 @@
             </div>
         </template>
         <template v-else-if="cardType==5">
-
+            <div class="todo-l">
+                <p>{{cardData.time}}</p>
+                <p>{{cardData.history}}</p>
+                <p>处方号：{{cardData.hid}}</p>
+            </div>
+            <div class="todo-r">
+                <div class="todo-bg" :style="`background-image:url(${cardData.avatar})`"></div>
+            </div>
         </template>
         <template v-else-if="cardType==6">
-             <div class="todo-l">
-                 <p>姓名：{{cardData.iname}}</p>
+            <div class="todo-l">
                 <p>咨询时间：{{cardData.time}}</p>
             </div>
             <div class="todo-r">
@@ -48,12 +74,18 @@
             </div>
         </template>
         <template v-else-if="cardType==7">
-
+            <div class="todo-l">
+                <p>护理时间：{{cardData.time}}</p>
+                <p>护理人员：李师师护士</p>
+            </div>
+            <div class="todo-r">
+                <div class="todo-bg" :style="`background-image:url(${cardData.avatar})`"></div>
+            </div>
         </template>
     </div>
 </template>
 <script>
-// cardType 1 医生首页列表 2 护士首页列表 3 公告列表 4 病历列表 5 收益列表 6 咨询列表 7 退费列表
+// cardType 1 医生首页列表 2 护士首页列表 3 公告列表 4 病历列表 5 收益列表 6 咨询列表 7 历史护理列表
 export default {
     props:{
         cardType:{
@@ -68,8 +100,14 @@ export default {
         }
     },
     methods:{
-            wenzhen(){
-                this.$router.push("/start")
+            houzhen(){
+                this.$createToast({
+                    txt: '我们将会通知医生您已到达',
+                    type: 'correct'
+                }).show()
+            },
+            pingjia(){
+                
             }
         }
 }

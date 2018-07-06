@@ -8,7 +8,7 @@
                 <p>hi,耕恺,我是你的智能助理小Z, 有什么可以帮你的吗？</p>
             </div>
             <ul>
-                <li>我要完善既往病史</li>
+                <li><router-link :to="`/history`">我要完善既往病史</router-link></li>
                 <li>挂号咨询，挂什么科室</li>
                 <li>上传检查报告分析</li>
             </ul>

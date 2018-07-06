@@ -19,9 +19,6 @@
                         <card :cardType="cardType" :cardData="item"></card>
                     </li>
                 </ul>
-                <div class='jb-card' v-if="cardType==1 && index===(ldata.length-1)">
-                    <timer-config :tableType="tableType" :tableData="group.mz" :dataTimes="group.times"></timer-config>
-                </div>
             </li>
         </ul>
         <div class="list-shortcut">
@@ -47,7 +44,6 @@
 <script>
 import Scroll from 'base/scroll/scroll'
 import Loading from 'base/loading/loading'
-import TimerConfig from 'base/timer-config/timer-config'
 import Card from 'base/card/card'
 // 导航字母的高度
 const ANCHOR_HEIGHT = 30
@@ -191,7 +187,6 @@ export default {
     components:{
         Scroll,
         Loading,
-        TimerConfig,
         Card
     }
 }

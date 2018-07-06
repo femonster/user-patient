@@ -14,7 +14,7 @@
                             <div class="doctor">
                                 <div class="desc">多喝热水</div>
                                  <div class="p-avatar">
-                                    <img src="http://www.gengkai.site/assets/images/avatar.jpg">
+                                    <img src="https://y.gtimg.cn/music/photo_new/T001R300x300M000004DFS271osAwp.jpg?max_age=2592000">
                                 </div> 
                             </div>   
                         </div>
@@ -40,7 +40,7 @@ import Scroll from 'base/scroll/scroll'
 export default {
     props:{
         topnum:{
-            type:Number,
+            type:[Number,String],
             default:0
         },
         isnow:{
@@ -56,10 +56,11 @@ export default {
     methods:{
         sendHandle(){
             let div = document.createElement("div")
-            div.className = "doctor"
-            div.innerHTML=`<div class="desc">${this.mocktalk}</div>
-                                <div class="p-avatar">
-                            <img src="http://www.gengkai.site/assets/images/avatar.jpg">`
+            div.className = "paitent"
+            div.innerHTML=`<div class="p-avatar">
+                                <img src="https://y.gtimg.cn/music/photo_new/T001R300x300M000003DBAjk2MMfhR.jpg?max_age=2592000">
+                            </div>
+                            <div class="desc">${this.mocktalk}</div>`
             this.$refs.talkbox.appendChild(div)
             this.mocktalk = ""
         }

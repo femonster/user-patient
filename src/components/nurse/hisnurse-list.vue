@@ -4,19 +4,19 @@
             <div class="h-list-header">
                 <img src="http://www.gengkai.site/assets/images/avatar.jpg" alt="avatar" class="avatar">
                 <div class="his-btns">
-                    <button>我的预约</button>
-                    <button>父亲的预约</button>
-                    <button>母亲的预约</button>
+                    <button>我的护理</button>
+                    <button>父亲的护理</button>
+                    <button>母亲的护理</button>
                 </div>
             </div>
         <div class="histroy-list-scroll">
-            <listview :ldata="listData" cardType="1"></listview>x
+            <listview :ldata="listData" cardType="7" @select="select"></listview>x
         </div>
     </div>
 </template>
 <script>
 import Listview from 'base/listview/listview'
-import { nowlist } from 'mock/nowlist'
+import { mock_history } from 'mock/mock_history'
 
 export default {
     data(){
@@ -25,10 +25,16 @@ export default {
         }
     },
     created(){
-        document.title = "我的预约挂号"
+        document.title = "我的护理"
         setTimeout(()=>{
-            this.listData = nowlist
+            this.listData = mock_history
         },20)
+    },
+    methods:{
+        select(item){
+            this.$router.push("/hisnursedetail/123")
+            console.log(item)
+        }
     },
     components:{
         Listview

@@ -1,7 +1,7 @@
 <template>
         <div class="d-header">
-            <div class="notice">
-                <p class="notice-scroll">
+            <div class="notice" v-if="isnotice">
+                <p class="notice-scroll" ref="notice">
                     <marquee v-if="isdoc">今天是我的生日，来找我看病不花钱！</marquee>
                     <marquee v-else>今天是护士节，放假一天，不接受预约</marquee>
                     </p>
@@ -44,6 +44,10 @@
 <script>
 export default {
     props:{
+        isnotice:{
+            type:Boolean,
+            default:true
+        },
         isdoc:{
             type:Boolean,
             default:true
@@ -54,7 +58,7 @@ export default {
              this.$createDialog({
                 type: 'alert',
                 title: '2018/07/05 公告',
-                content: '今天是我的生日，来找我看病不花钱！',
+                content: this.$refs.notice.innerText,
                 icon: 'cubeic-alert'
             }).show()
         }

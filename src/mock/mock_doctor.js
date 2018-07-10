@@ -3,7 +3,8 @@ export const mock_doctor = [{
     "department": "内科",
     "office": "主任",
     "hospital": "北京人民医院",
-    "desc": "二十年老医生，很强悍",
+    "peoplenum": "357",
+    "goodnum": "99%",
     "name": "Alan Walker (艾伦·沃克)",
     "avatar": "https://y.gtimg.cn/music/photo_new/T001R300x300M0000020PeOh4ZaCw1.jpg?max_age=2592000"
 }, {
@@ -12,7 +13,8 @@ export const mock_doctor = [{
     "department": "内科",
     "office": "主任",
     "hospital": "北京人民医院",
-    "desc": "二十年老医生，很强悍",
+    "peoplenum": "357",
+    "goodnum": "99%",
     "avatar": "https://y.gtimg.cn/music/photo_new/T001R300x300M000003ArN8Z0WpjTz.jpg?max_age=2592000"
 }, {
     "id": "003CoxJh1zFPpx",
@@ -20,7 +22,8 @@ export const mock_doctor = [{
     "department": "内科",
     "office": "主任",
     "hospital": "北京人民医院",
-    "desc": "二十年老医生，很强悍",
+    "peoplenum": "357",
+    "goodnum": "99%",
     "avatar": "https://y.gtimg.cn/music/photo_new/T001R300x300M000003CoxJh1zFPpx.jpg?max_age=2592000"
 }, {
     "id": "004AlfUb0cVkN1",
@@ -28,7 +31,8 @@ export const mock_doctor = [{
     "department": "外科",
     "office": "主任",
     "hospital": "北京人民医院",
-    "desc": "二十年老医生，很强悍",
+    "peoplenum": "357",
+    "goodnum": "99%",
     "avatar": "https://y.gtimg.cn/music/photo_new/T001R300x300M000004AlfUb0cVkN1.jpg?max_age=2592000"
 }, {
     "id": "002pUZT93gF4Cu",
@@ -36,7 +40,8 @@ export const mock_doctor = [{
     "department": "外科",
     "office": "主任",
     "hospital": "北京人民医院",
-    "desc": "二十年老医生，很强悍",
+    "peoplenum": "357",
+    "goodnum": "99%",
     "avatar": "https://y.gtimg.cn/music/photo_new/T001R300x300M000002pUZT93gF4Cu.jpg?max_age=2592000"
 }, {
     "id": "003LaMHm42u7qS",
@@ -44,7 +49,8 @@ export const mock_doctor = [{
     "office": "主任",
     "department": "儿科",
     "hospital": "北京人民医院",
-    "desc": "二十年老医生，很强悍",
+    "peoplenum": "357",
+    "goodnum": "99%",
     "avatar": "https://y.gtimg.cn/music/photo_new/T001R300x300M000003LaMHm42u7qS.jpg?max_age=2592000"
 }, {
     "id": "003DBAjk2MMfhR",
@@ -52,7 +58,8 @@ export const mock_doctor = [{
     "department": "外科",
     "office": "主任",
     "hospital": "山西人民医院",
-    "desc": "二十年老医生，很强悍",
+    "peoplenum": "357",
+    "goodnum": "99%",
     "avatar": "https://y.gtimg.cn/music/photo_new/T001R300x300M000003DBAjk2MMfhR.jpg?max_age=2592000"
 }, {
     "id": "003Nz2So3XXYek",
@@ -60,7 +67,8 @@ export const mock_doctor = [{
     "department": "五官科",
     "office": "主任",
     "hospital": "山西人民医院",
-    "desc": "二十年老医生，很强悍",
+    "peoplenum": "357",
+    "goodnum": "99%",
     "avatar": "https://y.gtimg.cn/music/photo_new/T001R300x300M000003Nz2So3XXYek.jpg?max_age=2592000"
 }, {
     "id": "004DFS271osAwp",
@@ -68,7 +76,8 @@ export const mock_doctor = [{
     "department": "外科",
     "office": "主任",
     "hospital": "山西人民医院",
-    "desc": "二十年老医生，很强悍",
+    "peoplenum": "357",
+    "goodnum": "99%",
     "avatar": "https://y.gtimg.cn/music/photo_new/T001R300x300M000004DFS271osAwp.jpg?max_age=2592000"
 }, {
     "id": "000jnR7q3pCzYG",
@@ -76,7 +85,8 @@ export const mock_doctor = [{
     "department": "外科",
     "hospital": "山西人民医院",
     "office": "主任",
-    "desc": "二十年老医生，很强悍",
+    "peoplenum": "357",
+    "goodnum": "99%",
     "avatar": "https://y.gtimg.cn/music/photo_new/T001R300x300M000000jnR7q3pCzYG.jpg?max_age=2592000"
 }, {
     "id": "004EyqQS2hMS6V",
@@ -84,7 +94,8 @@ export const mock_doctor = [{
     "department": "外科",
     "hospital": "北京人民医院",
     "office": "主任",
-    "desc": "二十年老医生，很强悍",
+    "peoplenum": "357",
+    "goodnum": "99%",
     "avatar": "https://y.gtimg.cn/music/photo_new/T001R300x300M000004EyqQS2hMS6V.jpg?max_age=2592000"
 }, {
     "id": "000hNnWC3kko2c",
@@ -92,6 +103,7 @@ export const mock_doctor = [{
     "department": "内科",
     "hospital": "北京人民医院",
     "office": "主任",
-    "desc": "二十年老医生，很强悍",
+    "peoplenum": "357",
+    "goodnum": "99%",
     "avatar": "https://y.gtimg.cn/music/photo_new/T001R300x300M000000hNnWC3kko2c.jpg?max_age=2592000"
 }]

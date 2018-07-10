@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="doc-comment">
-            <h4>热门评价 <a href="javascript:;">我要评价</a></h4>
+            <h4>热门评价 <a href="javascript:;">查看全部</a></h4>
             <div class="comments-box">
                 <ul>
                     <li>

@@ -34,7 +34,7 @@
                     <p>99.7%</p>
                 </div>
                 <div class="cz-times times">
-                    <p>出诊人数</p>
+                    <p>诊疗人数</p>
                     <p>1245345人次</p>
                 </div>
             </div>

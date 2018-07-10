@@ -15,7 +15,11 @@
             </div>
         </div>
         <div class="doc-comment">
+<<<<<<< HEAD
             <h4>热门评价 <router-link :to="`/review?t=d`">我要评价</router-link></h4>
+=======
+            <h4>热门评价 <a href="javascript:;">查看全部</a></h4>
+>>>>>>> 1ba1445008871d697b6ee8b0292eb26698805cfa
             <div class="comments-box">
                 <ul>
                     <li>

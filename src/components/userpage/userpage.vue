@@ -13,20 +13,27 @@
             </div>
             <nav class="doctor-nav">
                 <ul>
-                    <li>全部</li>
+                    <li @click="isort=!isort">排序 ↓</li>
                     <li>外科</li>
                     <li>内科</li>
                     <li>儿科</li>
                     <li>五官科</li>
                     <li>妇科</li>
-                    <li>...</li>
+                    <li>全部 ↓</li>
                 </ul>
+                <div class="sort-list" v-show="isort">
+                    <ul>
+                        <li>按距离</li>
+                        <li>按好评</li>
+                        <li>按忘了</li>
+                    </ul>
+                </div>
             </nav>
         </div>        
         <div class="doctor-list" :style="`top:${offsetH}px`">
             <scroll :data="doctorList" class="doctor-scroll">
                 <div>
-                    <div class="doctor-item" v-for="(item,index) in doctorList" @click="toDoc(item.id)">
+                    <div class="doctor-item" v-for="(item,index) in doctorList" @click="toDoc(item.id)" :key="index">
                         <div class="img-box">
                             <img :src="item.avatar" alt="">
                         </div>
@@ -34,7 +41,8 @@
                             <p>医师姓名：{{item.name}}</p>
                             <p>科室：{{item.department}}</p>
                             <p>所属医院：{{item.hospital}}</p>
-                            <p>个人介绍：{{item.desc}}</p>
+                            <p>诊疗人数：{{item.peoplenum}}</p>
+                            <p>好评度：{{item.goodnum}}</p>
                         </div>
                     </div>
                 </div>
@@ -53,8 +61,7 @@ export default {
         return {
             doctorList:[],
             offsetH:0,
-            ispay:false,
-            ispropcurr:false
+            isort:false
         }
     },
     created(){
@@ -100,7 +107,24 @@ export default {
         .doctor-nav
             width 100%
             padding 5px 0
+            position relative
             border-bottom 1px solid #333333
+            .sort-list
+                position absolute
+                width 100% 
+                bottom -110px
+                z-index 9999
+                background-color #ffffff
+                ul  
+                    width 100%
+                    display block
+                    li 
+                        line-height 1.5
+                        padding 5px 0
+                        text-indent 1em
+                        box-sizing border-box
+                        &:not(:last-child)
+                            border-bottom 1px solid #eeeeee
             ul 
                 width 100% 
                 display flex

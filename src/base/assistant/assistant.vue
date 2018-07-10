@@ -5,7 +5,8 @@
         </div>
         <div class="ass-content">
             <div class="ass-talk">
-                <p>hi,耕恺,我是你的智能助理小Z, 有什么可以帮你的吗？</p>
+                <p v-if="!ispay">hi,耕恺,我是你的智能助理小Z, 有什么可以帮你的吗？</p>
+                <p v-if="ispay">Hi~david，你今天有预约XXXXXX医师门诊，请前往XXXXXXXX，你的就医序号是XXXXX,就医验证码XXXXXXX（需要出示给医师），到达后请点击右方按钮候诊 <button>候诊</button></p>
             </div>
             <ul>
                 <li><router-link :to="`/history`">我要完善既往病史</router-link></li>
@@ -21,6 +22,21 @@
 </template>
 <script>
     export default {
+        props:{
+            ispay:{
+                type:Boolean,
+                default:false
+            },
+            ispropcurr:{
+                type:Boolean,
+                default:false
+            }
+        },
+        created(){
+           if(this.ispropcurr){
+               this.iscurr = true
+           }
+        },
         data(){
             return {
                 iscurr:false

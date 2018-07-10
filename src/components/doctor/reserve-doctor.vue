@@ -13,7 +13,7 @@
         <cube-form-item :field="schema.fields[7]"></cube-form-item>
         <cube-form-item :field="schema.fields[8]"></cube-form-item>
         </cube-form>
-        <cube-button class="pay-btn">确定购买</cube-button>
+        <router-link :to="`pay`" class="pay-btn" tag="button">确定购买</router-link>
     </div>
 </template>
 <script>
@@ -116,6 +116,11 @@ export default {
             }
         }
     },
+    methods:{
+        ghpay(){
+            this.$route.push("/pay")
+        }
+    },
     created(){
         document.title="预约挂号/上门诊疗"
     }
@@ -127,6 +132,7 @@ export default {
     bottom 0
     left 0
     position fixed
+    padding 10px
 </style>
 
 

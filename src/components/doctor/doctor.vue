@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="doc-comment">
-            <h4>热门评价 <a href="javascript:;">我要评价</a></h4>
+            <h4>热门评价 <router-link :to="`/review?t=d`">我要评价</router-link></h4>
             <div class="comments-box">
                 <ul>
                     <li>
@@ -49,7 +49,7 @@
                 </ul>
             </div>
         </div>
-        <cube-button class="pay-btn">({{btntext}})购买</cube-button>
+        <cube-button class="pay-btn" @click="topay">({{btntext}})购买</cube-button>
     </div>
 </template>
 <script>
@@ -81,6 +81,15 @@ export default {
             this.ischeck1=false
             this.ischeck2=false
             this.ischeck3=true
+        },
+        topay(){
+            if(this.ischeck1){
+                this.$router.push('/pay?t=tw')
+            }else if(this.ischeck2){
+                this.$router.push('/fampay')
+            }else{
+                this.$router.push('/reservedoc')
+            }
         },
         checkBtn(event){
             var types = event.target.dataset.check 

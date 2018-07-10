@@ -40,7 +40,7 @@
                 </div>
             </scroll>
         </div>
-        <assistant></assistant>
+        <assistant :ispay="ispay" :ispropcurr="ispropcurr"></assistant>
     </div>
 
 </template>
@@ -52,11 +52,18 @@ export default {
     data(){
         return {
             doctorList:[],
-            offsetH:0
+            offsetH:0,
+            ispay:false,
+            ispropcurr:false
         }
     },
     created(){
         this.doctorList = mock_doctor
+        if(this.$route.query.p && this.$route.query.p=="1"){
+            this.ispay = true
+            this.ispropcurr = true
+
+        }
     },
     mounted(){
         this.offsetH = this.$refs.header.clientHeight+20

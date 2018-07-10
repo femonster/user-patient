@@ -4,6 +4,18 @@
                 <div class="talk-detail">
                     <scroll>
                         <div class="talk-detail-box" ref="talkbox">
+                            <div class="doc-desc" v-if="isdesc">
+                                <div class="doc-one">
+                                    <img src="https://y.gtimg.cn/music/photo_new/T001R300x300M000004DFS271osAwp.jpg?max_age=2592000" alt="">
+                                    <p>张二医生正在为您服务</p>
+                                    <button>关注</button>
+                                    <button>推荐</button>
+                                </div>
+                                <div class="doc-two">
+                                    <router-link :to="`reservedoc`" tag="button">预约挂号</router-link>
+                                    <router-link :to="`reservedoc`" tag="button">上门诊疗</router-link>
+                                </div>
+                            </div>
                             <p class="timer">2018/6/30 17:30</p>
                             <div class="paitent">
                                 <div class="p-avatar">
@@ -46,6 +58,10 @@ export default {
         isnow:{
             type:Boolean,
             default:true
+        },
+        isdesc:{
+            type:Boolean,
+            default:false
         }
     },
     data(){
@@ -90,6 +106,18 @@ export default {
             width 100%
             box-sizing border-box
             padding 10px
+            .doc-desc
+                width 100% 
+                font-size 14px
+                .doc-one 
+                    display flex
+                    justify-content space-between
+                    align-items center
+                    margin-bottom 10px
+                    img 
+                        width 50px
+                        height 50px
+                        border-radius 50%
         .timer
             text-align center
             margin-top 20px

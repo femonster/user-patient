@@ -3,7 +3,7 @@
         <cube-form
         :model="model"
         :schema="schema"></cube-form>
-        <cube-button class="pay-btn">确定购买</cube-button>
+        <cube-button class="pay-btn" @click="payfornurse">确定购买</cube-button>
     </div>
 </template>
 <script>
@@ -79,7 +79,9 @@ export default {
         }
     },
     methods:{
-        
+        payfornurse(){
+            this.$router.push({path:"/pay",query:{t:"n"}})
+        }
     },
     created(){
         document.title="预约护理"

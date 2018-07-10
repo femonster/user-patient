@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="doc-comment">
-            <h4>热门评价 <a href="javascript:;">我要评价</a></h4>
+            <h4>热门评价 <router-link :to="`/review?t=n`">我要评价</router-link></h4>
             <div class="comments-box">
                 <ul>
                     <li>
@@ -55,7 +55,7 @@
                 </ul>
             </div>
         </div>
-        <cube-button class="pay-btn">({{btnsmock[currentIndex].type}})购买</cube-button>
+        <cube-button class="pay-btn" @click="nursepay">({{btnsmock[currentIndex].type}})购买</cube-button>
     </div>
 </template>
 <script>
@@ -85,6 +85,9 @@ export default {
     methods:{
         checkBtn(index){
             this.currentIndex = index
+        },
+        nursepay(){
+            this.$router.push("/reservenurse")
         }
     },
     created(){

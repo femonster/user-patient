@@ -7,14 +7,14 @@
                 <p>科室：骨科</p>
                 <p>所属医院：北京第一人民医院</p>
                 <p>个人介绍：医学博士，15年临床经验</p>
-                <button>续费</button>
+                <router-link :to="`fampay`" tag="button">续费</router-link>
             </div>
         </div>
         <div class="choose-btns">
-            <button>预约挂号</button>
-            <button>上门诊疗</button>
-            <button>我的病历</button>
-            <button>历史咨询</button>
+            <router-link :to="`reservedoc`" tag="button">预约挂号</router-link>
+            <router-link :to="`reservedoc`" tag="button">上门诊疗</router-link>
+            <router-link :to="`hislist`" tag="button">我的病历</router-link>
+            <router-link :to="`hisconlist`" tag="button">历史咨询</router-link>
         </div>
         <div class="talk">
             <talk topnum="200"></talk>

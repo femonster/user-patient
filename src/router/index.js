@@ -10,6 +10,7 @@ import Doctor from 'components/doctor/doctor'
 import Famdoc from 'components/doctor/family-doc'
 import Homelist from 'components/doctor/homedoc-list'
 import ReserveDoc from 'components/doctor/reserve-doctor'
+import Fampay from 'components/doctor/pay-family'
 
 import Nurselist from 'components/nurse/nurse-list'
 import Ntypelist from 'components/nurse/type-list'
@@ -30,8 +31,12 @@ import Hischufang from 'components/casehistory/hischufang.vue'
 import Consultlist from 'components/consult/consult-list'
 import Hiscondetail from 'components/consult/hiscon-detail.vue'
 import Hisconlist from 'components/consult/hiscon-list.vue'
+import Consultpay from 'components/consult/consult-pay.vue'
+import Consultnow from 'components/consult/consult-now.vue'
 
 import Pay from 'components/payfor/pay.vue'
+
+import Review from 'components/review/review'
 Vue.use(Router)
 
 export default new Router({
@@ -135,5 +140,21 @@ export default new Router({
         path: "/reservedoc",
         name: 'reservedoc',
         component: ReserveDoc
+    }, {
+        path: "/fampay",
+        name: 'fampay',
+        component: Fampay
+    }, {
+        path: "/connow",
+        name: 'consultnow',
+        component: Consultnow
+    }, {
+        path: "/conpay",
+        name: 'consultpay',
+        component: Consultpay
+    }, {
+        path: "/review",
+        name: 'review',
+        component: Review
     }]
 })

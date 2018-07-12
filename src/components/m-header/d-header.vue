@@ -24,7 +24,7 @@
                     <p v-else>个人介绍:高级护士长，15年护工经历</p>
                 </div>
             </div>
-            <div class="feeling">
+            <div class="feeling" v-show="ispj">
                 <div class="zx-times times">
                     <p>咨询人数</p>
                     <p>23442次</p>
@@ -45,6 +45,10 @@
 export default {
     props:{
         isnotice:{
+            type:Boolean,
+            default:true
+        },
+        ispj:{
             type:Boolean,
             default:true
         },

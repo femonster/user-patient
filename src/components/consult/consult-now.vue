@@ -21,7 +21,7 @@
                 <p>剩余咨询时间</p>
                 <p>
                     28:45 （最长30分钟）
-                    <router-link :to="`conpay`" tag="button">再次购买</router-link>
+                    <router-link :to="`conpay`" tag="button">延长时间</router-link>
                 </p>
             </div>
         </div>

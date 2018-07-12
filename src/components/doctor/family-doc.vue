@@ -7,8 +7,11 @@
                 <p>科室：骨科</p>
                 <p>所属医院：北京第一人民医院</p>
                 <p>个人介绍：医学博士，15年临床经验</p>
-                <router-link :to="`fampay`" tag="button">续费</router-link>
+                
             </div>
+        </div>
+        <div class="pay-box">
+            <p>家庭医生剩余 ：3天<router-link :to="`fampay`" tag="button">前去续费</router-link></p>
         </div>
         <div class="choose-btns">
             <router-link :to="`reservedoc`" tag="button">预约挂号</router-link>
@@ -37,6 +40,14 @@ export default {
     width 100% 
     box-sizing border-box
     padding 10px
+    .pay-box
+        width 100% 
+        box-sizing border-box
+        padding 10px
+        font-size 14px
+        border-bottom 1px solid #eeeeee
+        button 
+            margin-left 30px
     .f-header
         display flex
         align-items top 

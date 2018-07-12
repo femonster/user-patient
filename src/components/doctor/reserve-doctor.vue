@@ -7,19 +7,42 @@
         <cube-form-item :field="schema.fields[1]"></cube-form-item>
         <cube-form-item :field="schema.fields[2]"></cube-form-item>
         <cube-form-item :field="schema.fields[3]"></cube-form-item>
-        <cube-form-item :field="schema.fields[4]"></cube-form-item>
+        <cube-form-item :field="schema.fields[4]">
+            <div class="select-box" style="display:flex;align-items:center;">
+                <cube-select
+                v-model="model.user"
+                :options="schema.fields[4].props.options">
+                </cube-select>
+                <a href="javascript:;" @click="addPeople">添加</a>
+            </div>
+           
+        </cube-form-item>
         <cube-form-item :field="schema.fields[5]" v-show="showSelect"></cube-form-item>
         <cube-form-item :field="schema.fields[6]"></cube-form-item>
         <cube-form-item :field="schema.fields[7]"></cube-form-item>
         <cube-form-item :field="schema.fields[8]"></cube-form-item>
         </cube-form>
         <router-link :to="`pay`" class="pay-btn" tag="button">确定购买</router-link>
+        <div class="modal" v-show="ismodal">
+            <div class="add-box">
+                <cube-input :placeholder="`姓名`"></cube-input>
+                <cube-input :placeholder="`年龄`"></cube-input>
+                <cube-input :placeholder="`性别`"></cube-input>
+                <cube-input :placeholder="`手机号`"></cube-input>
+                <cube-input :placeholder="`身份证号`"></cube-input>
+                <cube-textarea :placeholder="`既往病史`"></cube-textarea>
+                <cube-button class="add-btn sub-btn">确定</cube-button>
+                <cube-button  :outline="true" class="add-btn cancel-btn" @click="ismodal=false">取消</cube-button>
+            </div>
+            
+        </div>
     </div>
 </template>
 <script>
 export default {
     data(){
         return {
+            ismodal:false,
             showSelect:false,
             model: {
                 username:"张三丰",
@@ -55,7 +78,7 @@ export default {
                         modelKey: 'time',
                         label: '预约时间',
                         props: {
-                            options: ['2018-07-06 13:00','2018-07-06 13:30','2018-07-06 14:00','2018-07-06 14:30','2018-07-06 15:30']
+                            options: ['2018-07-03 周二 下午','2018-07-05 周四 上午','2018-07-06 周五 下午']
                         }
                     },
                     {
@@ -110,7 +133,7 @@ export default {
                     {
                         type: 'input',
                         modelKey: 'phone',
-                        label: '联系电话'
+                        label: '用户电话'
                     }
                 ]
             }
@@ -119,6 +142,9 @@ export default {
     methods:{
         ghpay(){
             this.$route.push("/pay")
+        },
+        addPeople(){
+            this.ismodal = true
         }
     },
     created(){
@@ -133,6 +159,31 @@ export default {
     left 0
     position fixed
     padding 10px
+.modal
+    position fixed
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background-color rgba(0,0,0,0.4)
+    .add-box
+        width 80%
+        height 500px
+        margin 50px auto 0
+        background-color #ffffff
+        box-sizing border-box
+        padding 10px
+        position relative
+        div
+            margin 10px 0
+        .add-btn
+            width 50% 
+            position absolute
+            bottom 0
+        .sub-btn 
+            left 0    
+        .cancel-btn
+            right 0
 </style>
 
 

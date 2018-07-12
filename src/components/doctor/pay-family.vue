@@ -3,9 +3,9 @@
         <div class="pay-item pay-header">
             <h4>张三 - 家庭医生服务</h4>
             <p>
-                <span>免费预约挂号</span>
-                <span>上面诊疗（1次）</span>
-                <span>免费图文资讯</span>
+                <span>免费预约挂号(2次)</span>
+                <span>上面诊疗(1次)</span>
+                <span>免费图文资讯(无限)</span>
             </p>
         </div>
         <div class="pay-item pay-desc">

@@ -1,6 +1,6 @@
 <template>
     <div class="conpay-box">
-        <d-header :isnotice="false"></d-header>
+        <d-header :isnotice="false" :ispj="false"></d-header>
         <div class="c-btns">
             <router-link :to="`reservedoc`" tag="button">预约挂号</router-link>
             <router-link :to="`reservedoc`" tag="button">上门诊疗</router-link>
@@ -12,6 +12,9 @@
                 <option value="2">张地方 34岁 14033330202033</option>
                 <option value="3">张就 34岁 14033330202033</option>
             </select>
+            <br><br>
+            <label>完善既往病史：</label>   
+            <router-link :to="`/history`">前去完善</router-link>
             <br><br>
             <label>病情描述：</label>   
             <textarea name="" id="" cols="30" rows="10"></textarea>

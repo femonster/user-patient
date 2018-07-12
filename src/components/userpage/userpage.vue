@@ -61,7 +61,9 @@ export default {
         return {
             doctorList:[],
             offsetH:0,
-            isort:false
+            isort:false,
+            ispay:false,
+            ispropcurr:false
         }
     },
     created(){

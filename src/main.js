@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import Cube from 'cube-ui'
 import 'common/stylus/index.styl'
+import 'common/fonts/iconfont.css'
 
 Vue.config.productionTip = false
 Vue.use(Cube)

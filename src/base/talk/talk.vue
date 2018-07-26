@@ -4,7 +4,7 @@
                 <div class="talk-detail">
                     <scroll>
                         <div class="talk-detail-box" ref="talkbox">
-                            <div class="doc-desc" v-if="isdesc">
+                            <!-- <div class="doc-desc" v-if="isdesc">
                                 <div class="doc-one">
                                     <img src="https://y.gtimg.cn/music/photo_new/T001R300x300M000004DFS271osAwp.jpg?max_age=2592000" alt="">
                                     <p>张二医生正在为您服务</p>
@@ -15,13 +15,17 @@
                                     <router-link :to="`reservedoc`" tag="button">预约挂号</router-link>
                                     <router-link :to="`reservedoc`" tag="button">上门诊疗</router-link>
                                 </div>
-                            </div>
+                            </div> -->
                             <p class="timer">2018/6/30 17:30</p>
                             <div class="paitent">
                                 <div class="p-avatar">
                                     <img src="https://y.gtimg.cn/music/photo_new/T001R300x300M000003DBAjk2MMfhR.jpg?max_age=2592000">
                                 </div>    
-                                <div class="desc">医生您好，我身体不舒服</div>
+                                <div class="desc">
+                                    王五 男 24岁 <br>
+                                    病情描述：感觉手麻，心悸，呼吸困难，去医院做了个心电图，说是心率不齐<br>
+                                    检查报告：<img style="width:50px" src="https://y.gtimg.cn/music/photo_new/T001R300x300M000003ArN8Z0WpjTz.jpg?max_age=2592000">
+                                </div>
                             </div>  
                             <div class="doctor">
                                 <div class="desc">多喝热水</div>

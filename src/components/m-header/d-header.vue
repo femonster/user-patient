@@ -13,6 +13,7 @@
                     <div class="i-l-btn">
                         <button>关注</button>
                         <button>推荐</button>
+                        <span class="tuijian">推荐热度：98</span>
                     </div>     
                 </div>
                 <div class="intro-r">
@@ -26,11 +27,11 @@
             </div>
             <div class="feeling" v-show="ispj">
                 <div class="zx-times times">
-                    <p>咨询人数</p>
-                    <p>23442次</p>
+                    <p>疗效</p>
+                    <p>98</p>
                 </div>
                 <div class="hp-times times">
-                    <p>好评率</p>
+                    <p>满意度</p>
                     <p>99.7%</p>
                 </div>
                 <div class="cz-times times">
@@ -89,6 +90,11 @@ export default {
             display flex
             box-sizing border-box
             padding 10px
+            .tuijian
+                font-size 12px
+                display block
+                text-align right
+                padding-top 5px
             .intro-l
                 text-align center
                 margin-right 10px

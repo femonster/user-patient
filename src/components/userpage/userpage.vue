@@ -25,7 +25,7 @@
                     <ul>
                         <li>按距离</li>
                         <li>按好评</li>
-                        <li>按忘了</li>
+                        <li>按综合</li>
                     </ul>
                 </div>
             </nav>

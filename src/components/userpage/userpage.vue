@@ -1,31 +1,28 @@
 <template>
     <div class="user-box">
+        <a-header ref="aheader"></a-header>
         <div class="u-header" ref="header">
-            <div class="u-top">
-                <router-link :to="`/person`">个人主页</router-link>
-                <p>北京市</p>
-                <router-link :to="`/notice`">消息中心</router-link>
-            </div>
             <div class="u-btns">
-                <router-link :to="`/homelist`" tag="cube-button">家庭医生</router-link>
-                <router-link :to="`/ntlist`" tag="cube-button">医疗护理</router-link>
                 <router-link :to="`/consultlist`" tag="cube-button">图文咨询</router-link>
+                <router-link :to="`/ntlist`" tag="cube-button">医疗护理</router-link>
+                <router-link :to="`/homelist`" tag="cube-button">家庭医生</router-link>
+                
             </div>
             <nav class="doctor-nav">
                 <ul>
-                    <li @click="isort=!isort">排序 ↓</li>
-                    <li>外科</li>
-                    <li>内科</li>
-                    <li>儿科</li>
-                    <li>五官科</li>
-                    <li>妇科</li>
-                    <li>全部 ↓</li>
+                    <li style="font-size:13px;border-right:1px solid #333;padding-right:2px;"><i class="iconfont icon-shouye2"></i>北京</li>
+                    <li @click="isort=!isort;isortall=false">排序 ↓</li>
+                    <li v-for="item in hot" @click="torandom">{{item}}</li>
+                    <li @click="isortall=!isortall;isort=false">全部 ↓</li>
                 </ul>
                 <div class="sort-list" v-show="isort">
                     <ul>
-                        <li>按距离</li>
-                        <li>按好评</li>
-                        <li>按忘了</li>
+                         <li v-for="item in sort" @click="torandom">{{item}}</li>
+                    </ul>
+                </div>
+                <div class="sort-list-all" v-show="isortall">
+                    <ul>
+                        <li v-for="item in all" @click="torandom">{{item}}</li>
                     </ul>
                 </div>
             </nav>
@@ -55,6 +52,7 @@
 <script>
 import Scroll from 'base/scroll/scroll'
 import Assistant from 'base/assistant/assistant'
+import AHeader from 'components/m-header/a-header'
 import {mock_doctor} from 'mock/mock_doctor'
 export default {
     data(){
@@ -62,30 +60,43 @@ export default {
             doctorList:[],
             offsetH:0,
             isort:false,
+            isortall:false,
             ispay:false,
-            ispropcurr:false
+            ispropcurr:false,
+            hot:["外科","内科","儿科","五官科","妇科"],
+            all:["外科","内科","儿科","五官科","妇科","口腔科","中医科","皮肤科","其他"],
+            sort:["按距离","按满意度","按综合"]
         }
     },
     created(){
         this.doctorList = mock_doctor
+        
         if(this.$route.query.p && this.$route.query.p=="1"){
             this.ispay = true
             this.ispropcurr = true
-
         }
+
+        setTimeout(()=>{
+            this.ispropcurr = true 
+        },5000)
     },
     mounted(){
-        this.offsetH = this.$refs.header.clientHeight+20
-        console.log(this.offsetH)
+        this.offsetH = this.$refs.header.clientHeight+60
     },
     methods:{
         toDoc(id){
             this.$router.push(`/doctor/${id}`)
+        },
+        torandom(){
+            this.doctorList = this.doctorList.sort(function(){ return Math.random() - 0.5});
+            this.isort = false;
+            this.isortall = false;
         }
     },
     components:{
         Scroll,
-        Assistant
+        Assistant,
+        AHeader
     }
 }
 </script>
@@ -93,13 +104,10 @@ export default {
 .user-box
     width 100%
     box-sizing border-box
-    padding 10px
     .u-header
+        box-sizing border-box
+        padding 10px
         width 100%
-        .u-top
-            display flex
-            justify-content space-between
-            margin-bottom 15px
         .u-btns
             display flex
             justify-content space-around
@@ -111,6 +119,23 @@ export default {
             padding 5px 0
             position relative
             border-bottom 1px solid #333333
+            .sort-list-all
+                position absolute
+                width 
+                top 0
+                width 100%
+                z-index 9999
+                background-color #ffffff
+                ul 
+                    width 100%
+                    display flex
+                    flex-wrap wrap
+                    border-top 1px solid #333333
+                    li  
+                        width 33%
+                        text-align center
+                        line-height 1.5
+                        padding 5px 0
             .sort-list
                 position absolute
                 width 100% 

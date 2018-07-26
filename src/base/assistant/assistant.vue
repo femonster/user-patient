@@ -10,8 +10,9 @@
             </div>
             <ul>
                 <li><router-link :to="`/history`">我要完善既往病史</router-link></li>
-                <li>挂号咨询，挂什么科室</li>
-                <li>上传检查报告分析</li>
+                <li><router-link :to="`/history`">上传检查报告分析</router-link></li>
+                <li>挂号咨询</li>
+                
             </ul>
         </div>
         <div class="ass-input">

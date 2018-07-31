@@ -6,7 +6,7 @@
         <div class="ass-content">
             <div class="ass-talk">
                 <p v-if="!ispay">hi,耕恺,我是你的智能助理小Z, 有什么可以帮你的吗？</p>
-                <p v-if="ispay">Hi~david，你今天有预约XXXXXX医师门诊，请前往XXXXXXXX，你的就医序号是XXXXX,就医验证码XXXXXXX（需要出示给医师），到达后请点击右方按钮候诊 <button>候诊</button></p>
+                <p v-if="ispay">Hi~david，你今天有预约XXXXXX医师门诊，请前往XXXXXXXX，你的就医序号是XXXXX,就医验证码XXXXXXX（需要出示给医师），到达后请点击右方按钮候诊 <button @click="toendpage">候诊</button></p>
             </div>
             <ul>
                 <li><router-link :to="`/history`">我要完善既往病史</router-link></li>
@@ -44,6 +44,9 @@
             }
         },
         methods:{
+            toendpage(){
+                this.$router.push("/endpage")
+            },
             callAss(){
                 this.iscurr = this.iscurr ? false : true
             }

@@ -101,10 +101,7 @@ export default {
     },
     methods:{
             houzhen(){
-                this.$createToast({
-                    txt: '我们将会通知医生您已到达',
-                    type: 'correct'
-                }).show()
+                this.$router.push("/endpage")
             },
             pingjia(){
                 

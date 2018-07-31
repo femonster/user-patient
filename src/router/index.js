@@ -36,6 +36,10 @@ import Consultnow from 'components/consult/consult-now.vue'
 
 import Pay from 'components/payfor/pay.vue'
 
+import Eval from 'components/endpage/evaluate'
+import EndPage from 'components/endpage/endpage'
+import Complain from 'components/endpage/complain'
+
 import Review from 'components/review/review'
 Vue.use(Router)
 
@@ -156,5 +160,17 @@ export default new Router({
         path: "/review",
         name: 'review',
         component: Review
+    }, {
+        path: "/endpage",
+        name: 'endpage',
+        component: EndPage
+    }, {
+        path: "/evaluate",
+        name: 'evaluate',
+        component: Eval
+    }, {
+        path: "/complain",
+        name: 'complain',
+        component: Complain
     }]
 })

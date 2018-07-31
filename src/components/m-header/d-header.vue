@@ -35,7 +35,7 @@
                     <p>99.7%</p>
                 </div>
                 <div class="cz-times times">
-                    <p>诊疗人数</p>
+                    <p>{{isdoc?"诊疗人数":"护理人数"}}</p>
                     <p>1245345人次</p>
                 </div>
             </div>

@@ -1,10 +1,13 @@
 <template>
+    <transition name="slide">
+
     <div class="doctor-box">
         <d-header></d-header>
         <div class="func-btns">
             <button class="func-btn tw-btn" data-check='tw' :class="{currnet:ischeck1}" @click="checkBtn">图文咨询<br/>￥50/次</button>
-            <button class="func-btn jt-btn" data-check='jt' :class="{currnet:ischeck2}" @click="checkBtn">家庭医生<br/>￥250/月</button>
             <button class="func-btn gh-btn" data-check='gh' :class="{currnet:ischeck3}" @click="checkBtn">挂号诊疗<br/>￥250/次</button>
+            <button class="func-btn jt-btn" data-check='jt' :class="{currnet:ischeck2}" @click="checkBtn">家庭医生<br/>￥250/月</button>
+
         </div>
         <div class="doc-imgs">
             <h4>医师风采</h4>
@@ -50,7 +53,12 @@
             </div>
         </div>
         <cube-button class="pay-btn" @click="topay">({{btntext}})购买</cube-button>
-    </div>
+        <div class="todoc" v-if="todoc" @click="toconsult">
+        返回咨询    
+        </div>
+    </div> 
+        
+</transition>
 </template>
 <script>
 import DHeader from 'components/m-header/d-header'
@@ -60,7 +68,8 @@ export default {
             btntext:"图文咨询",
             ischeck1:true,
             ischeck2:false,
-            ischeck3:false
+            ischeck3:false,
+            todoc:false
         }
     },
     methods:{
@@ -91,6 +100,9 @@ export default {
                 this.$router.push('/reservedoc')
             }
         },
+        toconsult(){
+            this.$router.push('/connow')
+        },
         checkBtn(event){
             var types = event.target.dataset.check 
             if(types=="tw"){
@@ -106,6 +118,9 @@ export default {
         document.title = "医生详情"
         if(this.$route.query.t=="home"){
             this._tohome()
+        }
+        if(this.$route.query.c=="1"){
+            this.todoc = true;
         }
     },
     components:{
@@ -169,6 +184,26 @@ export default {
         position fixed
         bottom 0
         left 0
+.slide-enter-active,.slide-leave-active
+    transition all 0.3s
+    opacity 0
+    
+.slide-enter, .slide-leave-to
+    transform: translate3d(-100%, 0, 0)
+    opacity 1
+
+.todoc
+    width 30px
+    position fixed
+    top 40%
+    right 0
+    background-color #3db9bd
+    color #ffffff
+    border-radius 5px 
+    font-size 14px
+    padding 10px 5px
+    box-sizing border-box
+
 </style>
 
 

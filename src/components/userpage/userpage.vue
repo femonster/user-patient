@@ -17,18 +17,12 @@
                 </ul>
                 <div class="sort-list" v-show="isort">
                     <ul>
-<<<<<<< HEAD
-                        <li>按距离</li>
-                        <li>按好评</li>
-                        <li>按综合</li>
-=======
                          <li v-for="item in sort" @click="torandom">{{item}}</li>
                     </ul>
                 </div>
                 <div class="sort-list-all" v-show="isortall">
                     <ul>
                         <li v-for="item in all" @click="torandom">{{item}}</li>
->>>>>>> 2e347107301bbbdf1756262969e29a61348d4363
                     </ul>
                 </div>
             </nav>

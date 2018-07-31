@@ -14,8 +14,7 @@
             <p>家庭医生剩余 ：3天<router-link :to="`fampay`" tag="button">前去续费</router-link></p>
         </div>
         <div class="choose-btns">
-            <router-link :to="`reservedoc`" tag="button">预约挂号</router-link>
-            <router-link :to="`reservedoc`" tag="button">上门诊疗</router-link>
+            <router-link :to="`reservedoc`" tag="button">预约诊疗</router-link>
             <router-link :to="`hislist`" tag="button">我的病历</router-link>
             <router-link :to="`hisconlist`" tag="button">历史咨询</router-link>
         </div>

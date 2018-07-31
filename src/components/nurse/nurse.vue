@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="doc-comment">
-            <h4>热门评价 <router-link :to="`/review?t=n`">我要评价</router-link></h4>
+            <h4>热门评价 <router-link :to="`/review?t=n`">全部评价</router-link></h4>
             <div class="comments-box">
                 <ul>
                     <li>
